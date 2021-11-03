@@ -1,0 +1,20 @@
+﻿@using CvProject.Models.Entities
+@model List<Interest>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5" style="color: #bd5d38">İLGİ ALANLARI</h2>
+    
+    <ul class="fa-ul mb-0">
+        @foreach(var item in Model)
+            {
+                <li>
+                    <span class="fa-li"><i class="fab fa-diaspora text-danger"></i></span>
+                    @item.Description
+                </li>
+            }
+        
+    </ul> 
+    
+</div>
+
