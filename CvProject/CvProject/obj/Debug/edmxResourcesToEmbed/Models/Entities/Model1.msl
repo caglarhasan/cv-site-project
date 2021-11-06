@@ -79,6 +79,7 @@
     <EntitySetMapping Name="Skill">
       <EntityTypeMapping TypeName="CvDBModel.Skill">
         <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ability" ColumnName="Ability" />
         </MappingFragment>

@@ -74,6 +74,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ability" Type="nvarchar" MaxLength="100" />
+    <Property Name="Progress" Type="tinyint" />
   </EntityType>
   <EntityContainer Name="CvDBModelStoreContainer">
     <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />

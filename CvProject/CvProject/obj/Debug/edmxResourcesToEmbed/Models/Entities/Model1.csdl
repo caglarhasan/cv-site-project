@@ -74,6 +74,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Ability" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Progress" Type="Byte" />
   </EntityType>
   <EntityContainer Name="CvDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="About" EntityType="Self.About" />

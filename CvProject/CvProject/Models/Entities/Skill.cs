@@ -16,5 +16,6 @@ namespace CvProject.Models.Entities
     {
         public int ID { get; set; }
         public string Ability { get; set; }
+        public Nullable<byte> Progress { get; set; }
     }
 }
