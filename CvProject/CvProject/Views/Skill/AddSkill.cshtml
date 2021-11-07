@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Yetkinlik Ekle</h2>
+<br />
+
+<form method="post" class="form-group">
+    <label>Yetkinlik Adı</label>
+    <input type="text" name="Ability" class="form-control" placeholder="Yetkinlik Adı Giriniz..." />
+    <br />
+    <label>İlerleme Oranı</label>
+    <input type="number" name="Progress" class="form-control" placeholder="İlerleme Oranı Giriniz..." />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>
+

@@ -1,0 +1,22 @@
+﻿@model CvProject.Models.Entities.Skill
+@{
+    ViewBag.Title = "GetSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yetkinlik Güncelle</h2>
+<br />
+
+<form method="post">
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @disabled = "disabled" })
+    <br />
+    @Html.Label("Yetkinlik Adı")
+    @Html.TextBoxFor(x => x.Ability, new { @class = "form-control" })
+    <br />
+    @Html.Label("İlerleme Oranı")
+    @Html.TextBoxFor(x => x.Progress, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

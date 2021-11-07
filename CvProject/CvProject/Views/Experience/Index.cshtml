@@ -26,8 +26,18 @@
             <td>@item.Subtitle</td>
             <td>@item.Description</td>
             <td>@item.Date</td>
-            <td><a href="/Experience/GetExperience/@item.ID" class="btn btn-warning">Düzenle</a></td>
-            <td><a href="/Experience/DeleteExperience/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td>
+                <a href="/Experience/GetExperience/@item.ID" class="btn btn-warning btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    Düzenle
+                </a>
+            </td>
+            <td>
+                <a href="/Experience/DeleteExperience/@item.ID" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash"></i>
+                    Sil
+                </a>
+            </td>
         </tr>
     }
 </table>
