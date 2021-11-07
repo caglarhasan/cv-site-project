@@ -1,0 +1,46 @@
+﻿@using CvProject.Models.Entities
+@model List<Education>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Eğitim Bilgileri</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Okul Adı</th>
+        <th>Bölüm Adı</th>
+        <th>Açıklama</th>
+        <th>Başlangıç Tarihi - Bitiş Tarihi</th>
+        <th>Düzenle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>
+            <td>@item.Subtitle</td>
+            <td>@item.Description</td>
+            <td>@item.Date</td>
+            <td>
+                <a href="/Education/GetEducation/@item.ID" class="btn btn-warning btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    Düzenle
+                </a>
+            </td>
+            <td>
+                <a href="/Education/DeleteEducation/@item.ID" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash"></i>
+                    Sil
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Education/AddEducation/" class="btn btn-primary">Eğitim Bilgisi Ekle</a>
