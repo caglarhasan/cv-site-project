@@ -1,9 +1,10 @@
 ﻿@using CvProject.Models.Entities
-@model List<Experience>
+@model List<Interest>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 
 <br />
 <body class="hold-transition sidebar-mini">
@@ -14,39 +15,32 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">İş Deneyimleri</h3>
+                                <h3 class="card-title">İlgi Alanları</h3>
                             </div>
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Firma/Şirket Adı</th>
-                                            <th>Unvan/Pozisyon</th>
-                                            <th>Açıklama</th>
-                                            <th>Başlangıç - Bitiş Tarihi</th>
+                                            <th style="width: 10px">#</th>
+                                            <th>İlgi Alanı</th>
                                             <th>Düzenle</th>
                                             <th>Sil</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        @foreach (var item in Model)
-                                        {
+                                       
+                                        @foreach(var item in Model) { 
                                             <tr>
-                                                <td>@item.ID</td>
-                                                <td>@item.Title</td>
-                                                <td>@item.Subtitle</td>
+                                                <td>@item.ID.</td>
                                                 <td>@item.Description</td>
-                                                <td>@item.Date</td>
                                                 <td>
-                                                    <a href="/Experience/GetExperience/@item.ID" class="btn btn-warning btn-sm">
+                                                    <a href="/Interest/GetInterest/@item.ID" class="btn btn-info btn-sm">
                                                         <i class="fas fa-pencil-alt"></i>
                                                         Düzenle
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="/Experience/DeleteExperience/@item.ID" class="btn btn-danger btn-sm">
+                                                    <a href="/Interest/DeleteInterest/@item.ID" class="btn btn-danger btn-sm">
                                                         <i class="fas fa-trash"></i>
                                                         Sil
                                                     </a>
@@ -56,7 +50,7 @@
                                     </tbody>
                                 </table>
                                 <br /><br />
-                                <a href="/Experience/AddExperience/" class="btn btn-primary">Yeni İş Deneyimi Ekle</a>
+                                <a href="/Interest/AddInterest/" class="btn btn-primary">Yeni İlgi Alanı Ekle</a>
                             </div>
                         </div>
                     </div>

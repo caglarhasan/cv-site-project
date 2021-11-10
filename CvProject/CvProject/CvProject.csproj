@@ -132,10 +132,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CertificationController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterestController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2353,6 +2355,12 @@
     <Content Include="Views\Education\AddEducation.cshtml" />
     <Content Include="Views\Education\GetEducation.cshtml" />
     <Content Include="Views\Certification\Index.cshtml" />
+    <Content Include="Views\Certification\AddCertification.cshtml" />
+    <Content Include="Views\Certification\GetCertification.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Interest\Index.cshtml" />
+    <Content Include="Views\Interest\AddInterest.cshtml" />
+    <Content Include="Views\Interest\GetInterest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

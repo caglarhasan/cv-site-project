@@ -1,26 +1,55 @@
-﻿
+﻿@using CvProject.Models.Entities
+@model List<About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hakkımda Menüsü</h2>
-
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>AD SOYAD</th>
-        <th>ŞEHİR</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Murat</td>
-        <td>Elazığ</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Mesut</td>
-        <td>Adana</td>
-    </tr>
-</table>
-
+<br />
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Hakkımda</h3>
+                            </div>
+                            <div class="card-body">
+                                <form method="post">
+                                    @foreach (var item in Model)
+                                    {
+                                        <label>Ad</label>
+                                        <input type="text" name="Name" value="@item.Name" class="form-control" />
+                                        <br />
+                                        <label>Soyad</label>
+                                        <input type="text" name="Surname" value="@item.Surname" class="form-control" />
+                                        <br />
+                                        <label>Adres</label>
+                                        <input type="text" name="Address" value="@item.Address" class="form-control" />
+                                        <br />
+                                        <label>Telefon</label>
+                                        <input type="text" name="Phone" value="@item.Phone" class="form-control" />
+                                        <br />
+                                        <label>E-Mail</label>
+                                        <input type="text" name="Mail" value="@item.Mail" class="form-control" />
+                                        <br />
+                                        <label>Fotoğraf</label>
+                                        <input type="text" name="Image" value="@item.Image" class="form-control" disabled/>
+                                        <br />
+                                        <label>Açıklama</label>
+                                        <textarea name="Description" class="form-control" rows="5">@item.Description</textarea>
+                                    }
+                                    <br />
+                                    <button class="btn btn-primary">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<br />

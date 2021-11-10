@@ -1,0 +1,19 @@
+﻿@model CvProject.Models.Entities.Interest
+@{
+    ViewBag.Title = "GetInterest";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İlgi Alanı Güncelle</h2>
+<br />
+
+<form method="post">
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @disabled = "disabled" })
+    <br />
+    @Html.Label("Yetkinlik Adı")
+    @Html.TextBoxFor(x=>x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

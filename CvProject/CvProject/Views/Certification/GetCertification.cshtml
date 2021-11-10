@@ -1,27 +1,24 @@
-﻿@model CvProject.Models.Entities.Experience
+﻿@model CvProject.Models.Entities.Certification
 @{
-    ViewBag.Title = "GetExperience";
+    ViewBag.Title = "GetCertification";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <br />
-<h2>İş Deneyimini Güncelle</h2>
+<h2>Sertifika/Kurs Güncelle</h2>
 <br />
 
 <form method="post">
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @disabled = "disabled" })
     <br />
-    @Html.Label("Firma/Şirket Adı")
+    @Html.Label("Sertifika/Kurs Adı")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
     <br />
-    @Html.Label("Unvan/Pozisyon")
+    @Html.Label("Kurum Adı")
     @Html.TextBoxFor(x => x.Subtitle, new { @class = "form-control" })
     <br />
-    @Html.Label("Başlangıç - Bitiş Tarihi")
+    @Html.Label("Tarih")
     @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
-    <br />
-    @Html.Label("Açıklama")
-    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
     <br />
     <button class="btn btn-info">Güncelle</button>
 </form>
