@@ -8,12 +8,12 @@ using System.Web.Mvc;
 
 namespace CvProject.Controllers
 {
+    [Authorize]
     public class CertificationController : Controller
     {
         // GET: Certification
         CertificationRepository repo = new CertificationRepository();
 
-        [Authorize]
         public ActionResult Index()
         {
             var values = repo.List();

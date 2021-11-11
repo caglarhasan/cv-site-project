@@ -8,10 +8,10 @@ using System.Web.Security;
 
 namespace CvProject.Controllers
 {
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         // GET: Account
-
         [HttpGet]
         public ActionResult Index()
         {
@@ -27,13 +27,20 @@ namespace CvProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(values.Username, false);
                 Session["Username"] = values.Username.ToString();
-                return RedirectToAction("Index", "Skill");
+                return RedirectToAction("Index", "About");
             }
             else
             {
 
                 return RedirectToAction("Index", "Account");
             }
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "Account");
         }
     }
 }

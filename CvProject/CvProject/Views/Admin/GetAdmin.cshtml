@@ -1,0 +1,21 @@
+﻿@model CvProject.Models.Entities.Admin
+@{
+    ViewBag.Title = "GetAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Kullanıcı Bilgilerini Güncelle</h2>
+<br />
+
+<form method="post">
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @disabled = "disabled" })
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
