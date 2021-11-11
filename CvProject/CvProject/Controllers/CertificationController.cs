@@ -13,6 +13,7 @@ namespace CvProject.Controllers
         // GET: Certification
         CertificationRepository repo = new CertificationRepository();
 
+        [Authorize]
         public ActionResult Index()
         {
             var values = repo.List();
